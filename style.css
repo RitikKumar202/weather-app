@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+:root{
+    --main-color: #0095ff;
+    --btn-hover-color: #008bee;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -12,12 +17,12 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #43AFFC;
+    background: linear-gradient(to bottom, #c346c2, #0095ff);
 }
 
 ::selection{
     color: #fff;
-    background: #43AFFC;
+    background: var(--main-color);
 }
 
 .wrapper{
@@ -28,7 +33,7 @@ body{
 }
 
 .wrapper header{
-    color: #43AFFC;
+    color: var(--main-color);
     font-size: 21px;
     font-weight: 500;
     padding: 16px 15px;
@@ -96,7 +101,7 @@ header i{
 }
 
 .input-part input:is(:focus, :valid){
-    border: 2px solid #43AFFC;
+    border: 2px solid var(--main-color);
 }
 
 .input-part input::placeholder{
@@ -124,12 +129,12 @@ header i{
 
 .input-part button{
     color: #fff;
-    background: #43AFFC;
+    background: var(--main-color);
     cursor: pointer;
     transition: 0.3s ease;
 }
 .input-part button:hover{
-    background: #088eee;
+    background: var(--btn-hover-color);
 }
 
 .wrapper .weather-part{
@@ -187,6 +192,7 @@ header i{
 .location i{
     font-size: 22px;
     margin: 3px 4px 0 0;         /* margin: 4px 5px 0 0; */
+    color: var(--main-color);
 }
 
 .weather-part .bottom-details{
@@ -207,7 +213,7 @@ header i{
 
 .column i{
     font-size: 40px;
-    color: #5DBBFF;
+    color: var(--main-color);
 }
 .column.humidity{
     border-left: 1px solid #bfbfbf;

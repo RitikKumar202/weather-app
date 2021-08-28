@@ -127,8 +127,6 @@ function weatherDetails(info){
         infoTxt.innerText = "";
         inputField.value = "";
         wrapper.classList.add("active");
-
-        console.log(info);
     }    
 }
 arrowBack.addEventListener("click", ()=>{
