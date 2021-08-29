@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root{
-    --main-color: #0095ff;
-    --btn-hover-color: #008bee;
+    --main-color: #0050e6;
+    --btn-hover-color: #1254cf;
+    --border: #000000;
+    --bg: rgba(255, 255, 255, 0.65);
 }
 
 *{
@@ -17,7 +19,11 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient(to bottom, #c346c2, #0095ff);
+    background-image: url(bg.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 ::selection{
@@ -28,18 +34,18 @@ body{
 .wrapper{
     width: 400px;
     border-radius: 8px;
-    background: #fff;
+    background: var(--bg);
     box-shadow: 0 4px 31px rgb(0, 0, 0, 0.45);
 }
 
 .wrapper header{
     color: var(--main-color);
     font-size: 21px;
-    font-weight: 500;
+    font-weight: 600;
     padding: 16px 15px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #bfbfbf;
+    border-bottom: 1px solid var(--border);
 }
 
 header i{
@@ -67,7 +73,7 @@ header i{
     font-size: 17px;
     text-align: center;
     padding: 12px 10px;
-    border-radius: 7px;
+    border-radius: 8px;
     margin-bottom: 15px;
 }
 
@@ -91,13 +97,14 @@ header i{
     border: none;
     outline: none;
     font-size: 18px;
-    border-radius: 7px;
+    border-radius: 8px;
 }
 
 .input-part input{
     text-align: center;
     padding: 0 15px;
-    border: 1px solid #bfbfbf;
+    border: 1px solid var(--border);
+    background: transparent;
 }
 
 .input-part input:is(:focus, :valid){
@@ -105,14 +112,14 @@ header i{
 }
 
 .input-part input::placeholder{
-    color: #bfbfbf;
+    color: rgb(105, 105, 105);
 }
 
 .input-part .separator{
     height: 1px;
     width: 100%;
     margin: 25px 0;
-    background: #ccc;
+    background: rgb(105, 105, 105);
     position: relative;
     display: flex;
     align-items: center;
@@ -120,10 +127,10 @@ header i{
 }
 
 .separator::before{
-    content: "or";
+    content: "";
     font-size: 19px;
-    color: #ccc;
-    background: #fff;
+    color: rgb(105, 105, 105);
+    background: transparent;
     padding: 0 15px;
 }
 
@@ -146,7 +153,7 @@ header i{
 }
 
 #date{
-    color: #686363;
+    color: #4d4d4d;
 }
 
 .wrapper.active .weather-part{
@@ -200,7 +207,7 @@ header i{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid #bfbfbf;
+    border-top: 1px solid var(--border);
 }
 
 .bottom-details .column{
@@ -216,7 +223,7 @@ header i{
     color: var(--main-color);
 }
 .column.humidity{
-    border-left: 1px solid #bfbfbf;
+    border-left: 1px solid var(--border);
 }
 .column .details{
     margin-left: 3px;
